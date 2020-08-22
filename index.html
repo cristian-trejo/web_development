@@ -1,63 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <title>Hola soy Cristian</title>
+    <link rel="icon" type="img/png" href="img/favicon.png"/>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ol>
-                <li>
-                    <a>Portafolio</a>
-                </li>
-                <li>
-                    <a>Experiencia</a>
-                </li>
-                <li>
-                    <a>Trabajemos juntos</a>
-                </li>
-            </ol>
-        </nav>
+    <header class="header">
+        <div>
+            <figure class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </figure>
+        
+            <nav class="menu">
+                <ol>
+                    <li>
+                        <a class="link" href="#portafolio">Portafolio</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#experiencia">Experiencia</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#contacto">Trabajemos juntos</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
     </header>
 
-    <section>
+    <section class="hero">
         <h1>
             Hola, soy <strong>Cristian.</strong> <br/> Desarrollador de <strong>Software</strong> con <br/> pasión por la <strong>tecnologia</strong>.
         </h1>
 
-        <img>Imagen de portada
+        <img src="img/hero.jpg" width="500" height="300" alt="Imagen principal">
 
     </section>
 
-    <section>
+    <section id="portafolio" class="portfolio">
         <h2>Portafolio (Proyectos Destacados)</h2>
-        <article>
-            <h3>UAV Mission Planning</h3>
-            <h6>Quantum GIS / Python</h6>
-            <p><small><strong>Fecha:</strong> 21/06/2020</small></p>
-            <p><small><strong>Puedes verlo en:</strong> www.github.com</small></p>
-            <p>UAV Mission Planning fue el resultado de 4 meses de trabajo
+        <article class="project">
+            <h3 class="project-title">UAV Mission Planning</h3>
+            <h6 class="project-course">Quantum GIS / Python</h6>
+            <p class="project-date"><small><strong>Fecha:</strong> 21/06/2020</small></p>
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> www.github.com</small></p>
+            <p class="project-description">UAV Mission Planning fue el resultado de 4 meses de trabajo
                 para crear una herramienta capaz de generar las caracteristicas
                 de vuelo optimas para tomar fotogrametria con drones.
             </p>
-        </article>
-    </section>
-
-    <section>
-        <h2>Más sobre mi experiencia</h2>    
-        <article>
-            <figure>
-                <img src="" alt=""/>
+            <figure class="project-imageContainer">
+                <img class="project-image" src="img/uav_mission_planning.png" width="500" alt="Imagen de proyecto">
             </figure>
         </article>
-        <h3>The Washington Center for Academic Semminars 2019</h3>
-        <p>Seminarios en la capital de Estados Unidos con la finalidad de desarrollar nuevas habildades</p>
-        <a href="">Ver reconocimiento.</a>
     </section>
 
-    <section>sección contacto</section>
-    <footer>footer</footer>
+    <section id="experiencia">
+        <h2>Más sobre mi experiencia</h2>    
+        <article class="studies">
+            <figure class="studies-imageContainer">
+                <img class="studies-image" src="img/twc.png" width="500" alt="Imagen de experiencia"/>
+            </figure>
+        </article>
+        <h3 class="studies-title">The Washington Center for Academic Semminars 2019</h3>
+        <p class="studies-description">Seminarios en la capital de Estados Unidos con la finalidad de desarrollar nuevas habildades</p>
+        <a class="studies-url" class="link" href="https://twc.edu/programs/academic-internship-program" target="_parent">Ver reconocimiento.</a>
+    </section>
+
+    <section id="contacto" class="contact">
+        <form action="/suscripcion/" class="form-email">
+            <h3>¿Creamos algo juntos?</h3>        
+            <input type="text" placeholder="Déjame tu email">
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">footer</footer>
 </body>
 </html>

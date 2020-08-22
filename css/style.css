@@ -1,0 +1,30 @@
+/*  Reglas
+    Selectores      -> p
+    Declararaciones -> color: red;        
+    Propiedades     -> color:
+    Valores         -> red;
+*/
+
+/*Selector de Etiqueta*/
+header
+{
+    background: lightblue;
+}
+
+/*Selector Descendente*/
+body header div nav ol li a
+{
+    font-size: 12px;
+}
+
+/*Selector de Clase*/
+.link
+{
+    font-size: 12px;
+}
+
+/*Selector de ID*/
+#portafolio
+{
+    background: lightblue;
+}
