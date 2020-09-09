@@ -50,6 +50,21 @@ body
     margin: 0;
 }
 
+figure
+{
+    /*Quitar margen para evitar espacio en blanco entre la parte superior del header*/
+    margin: 0;
+}
+
+ol,
+ul
+{
+    margin: 0;
+    padding: 0;
+    /*Quitar numeracion y viñetas de listas*/
+    list-style: none;
+}
+
 h1,
 h2,
 h3,
@@ -133,10 +148,49 @@ h1 strong
 {
     background-color: var(--background-gris-color);
     color: white;
+    /*Para que hijos (figure y nav) se alineen en horizontal*/
+    display: flex;
+    /*Figure izquierda y nav derecha (Expacios iguales entre elementos pero sin espacios en start y end)*/
+    justify-content: space-between;
+    /*Vamos a ir heredando de manera descendiente la altura del header*/
+    height: 90px;
+}
+
+.menu 
+{
+    /*Menu hereda de .header*/
+    height: inherit;
+}
+
+.logo img
+{
+    width: 90px;
+    height: inherit;
+}
+
+.header ol 
+{
+    /*.header ol hereda de .menu*/
+    /*Elementos de lista en forma horizontal (Solo aplica a hijos directos)*/
+    display: flex;
+    height: inherit;
+}
+
+.header ol li
+{
+    /*.header ol li hereade de header ol*/
+    height: inherit;
 }
 
 .header a 
 {
+    /*.header a hereda de .header ol li*/
     color: white;
     text-decoration: none;
+    height: inherit;
+    /*Una vez heredada la algura, aplicar flex y centrarlos*/
+    display: flex;
+    align-items: center;
+    /*Agregamos padding (relleno) a los elementos del menu*/
+    padding: 0 10px;
 }

@@ -1,12 +1,24 @@
 .flexbox
 {
+    height: 200px;
+    border: 1px solid blueviolet;    
     display: flex;
     /*Los Elementos no caen a la parte inferior*/
     /* flex-wrap: nowrap; */
     /*Cuado ya no cabe el elemento lo baja*/
     flex-wrap: wrap;
-    /*Alinea los elementos en columan*/
+    /*Alinea los elementos en forma horizontal*/
     /* flex-direction: column; */
+    /*Alinear el flex, para que inicie a la derecha, izquierda o centro
+        Flex-end
+        Center
+        Space-between: Crea espaciado entre elementos a excepcion del primero y ultimo.
+        Space-evenly: Igual espaciado entre todos los elementos.
+        Space-arround: Spacio diferente en el primero y ultimo.
+    */
+    justify-content: center;
+    /*Alinea los elementos en forma vertical*/
+    align-items: center;
 }
 
 .box
@@ -18,4 +30,15 @@
     /*Propuiedad para hijos de padres flex*/
     /*Capacidad de encojimiento del elemento (Respeta widht y height)*/
     flex-shrink: 0;
+}
+
+#box_1
+{  
+    /*Alinear hijos de flex de forma independiente*/
+    align-self: flex-start;
+}
+#box_3
+{  
+    /*Alinear hijos de flex de forma independiente*/
+    align-self: flex-end;
 }
