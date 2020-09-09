@@ -109,14 +109,20 @@ h2
 .hero
 {
     height: 300px;
-    background-image: url('../img/hero.jpg');
+    /* background-image: url('../img/hero.jpg'); */
     background-color: var(--background-gris-color);
-    background-size: 500px 300px;
-    background-repeat: no-repeat;
-    background-position-x: right;
+    /* background-size: 500px 300px; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: right; */
     /*Centramos el Hero*/
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image
+{
+    object-fit: cover;
 }
 
 .portfolio
@@ -151,6 +157,8 @@ h2
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 3px 5px 33px var(--gris-claro-color);
 }
 
 .project-image
@@ -263,6 +271,7 @@ h2
 .event-list 
 {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .event-list-title
@@ -272,8 +281,8 @@ h2
  
 .event
 {
-    border: 1px solid red;
-    margin: 10px;
+    /* border: 1px solid red; */
+    margin: 9px;
     width: 480px;
     /*Para que ocupen el tamaño designado*/
     flex-shrink: 0;
@@ -290,7 +299,7 @@ h2
     /*Ajustamos la imagen al contenedor sin que se desproporsione
         Cover para que se ajuste si importar tamaño
     */
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .event-detail
@@ -394,6 +403,12 @@ h2
 
 .container
 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
 }
