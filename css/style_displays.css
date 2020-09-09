@@ -1,0 +1,21 @@
+.flexbox
+{
+    display: flex;
+    /*Los Elementos no caen a la parte inferior*/
+    /* flex-wrap: nowrap; */
+    /*Cuado ya no cabe el elemento lo baja*/
+    flex-wrap: wrap;
+    /*Alinea los elementos en columan*/
+    /* flex-direction: column; */
+}
+
+.box
+{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid red;
+    /*Propuiedad para hijos de padres flex*/
+    /*Capacidad de encojimiento del elemento (Respeta widht y height)*/
+    flex-shrink: 0;
+}
