@@ -110,6 +110,13 @@ h1 strong
     background: white;
     /*Modelo de Cajas. Esto no permitira que el elemento rebase el width o height que se el defina*/
     /* box-sizing: border-box; */
+    /*Displays:
+        Block: ocupa todo el ancho posible. Bloque es toda la seccion orizontal
+        Inline: Espera contenido hacia sus costados. Los elementos se ponen uno a lado de otro*
+                Inline no respeta width y si el elemento ocupa mas espacio el siguiente estara abajo
+        Inline-Block: Respeta width de los elementos y los pone uno al lado de otro.
+        Flex: Ajusta los elementos para que todos entren en fila o columna, sin importar width o height.
+    */
 }
 
 .project-details 
