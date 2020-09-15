@@ -292,8 +292,8 @@ h2
 .event
 {
     /* border: 1px solid red; */
-    margin: 9px;
-    width: 480px;
+    margin: 1%;
+    width: 48%;
     /*Para que ocupen el tamaño designado*/
     flex-shrink: 0;
     border-radius: 10px;
@@ -510,6 +510,19 @@ h2
     {
         font-size: 0.8em;
     }
+
+    .event
+    {
+        width: auto;
+        /*Quitamos Scrool horizontal*/
+        flex-shrink: initial;
+    }
+
+    /*La etiqueta tiene un valor mayor que la etiqueta*/
+    .event img
+    {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px)
@@ -518,6 +531,13 @@ h2
     {
         width: auto;
         font-size: 12px;
+    }
+
+    .event-detail
+    {
+        /*1em = 16px*/
+        margin: -2em 0.5em 0.5em;
+        padding: 1em;
     }
 }
 
