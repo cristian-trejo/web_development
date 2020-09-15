@@ -196,12 +196,18 @@ h2
 
 .project-details 
 {
-    width: 500px;
+    width: 50%;
 }
 
 .project-imageContainer
 {
-    width: 500px;
+    width: 50%;
+}
+
+/*Colocar imagenes responsivas*/
+.project-imageContainer img
+{
+    max-width: 100%;
 }
 
 .header
@@ -456,11 +462,63 @@ h2
     {
         text-align: center;
     }
+
+    .project 
+    {
+        display: block;
+    }
+
+    .project-imageContainer
+    {
+        width: auto;
+        text-align: center;
+    }
+
+    .project-details
+    {
+        width: auto;
+        /* font-size: 16px; */
+    }
+
+    .project-course, .project-date, .project-url
+    {
+        margin: 0.3em 0;
+    }
+
+    .project-title
+    {
+        font-size: 1.5em;
+        margin-bottom: 0.3em;
+    }
+
+    .project-url
+    {
+        font-size: 1em;
+    }
+
+    .project-course
+    {
+        font-size: 0.7em;
+    }
+
+    .project-date
+    {
+        font-size: 1em;
+    }
+
+    .project-description
+    {
+        font-size: 0.8em;
+    }
 }
 
 @media screen and (max-width: 480px)
 {
-
+    .project-details
+    {
+        width: auto;
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 320px)
