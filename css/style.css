@@ -118,6 +118,7 @@ h2
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero-image
@@ -156,6 +157,7 @@ h2
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     overflow: hidden;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     box-shadow: 3px 5px 33px var(--gris-claro-color);
@@ -213,7 +215,8 @@ h2
     /*Para alinear el logo*/
     align-items: center;
     /*Figure izquierda y nav derecha (Expacios iguales entre elementos pero sin espacios en start y end)*/
-    justify-content: space-between;    
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .menu 
@@ -256,6 +259,7 @@ h2
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer img
@@ -335,6 +339,7 @@ h2
     align-items: center;
     /*Alinear iconos a la izquierda*/
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .social 
@@ -404,11 +409,61 @@ h2
 .container
 {
     /* border: 1px solid red; */
-    width: 1000px;
+    max-width: 1000px;
+    /*Para que tome todo el ancho disponible del elemento*/
+    /* width: 100%; */
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
     flex-wrap: inherit;
+}
+
+/* Desktop fist -> Empezar desde el MQ mas grande*/
+@media screen and (max-width: 1024px)
+{
+
+}
+
+/*Para resoluciones menores a iPad*/
+@media screen and (max-width: 767px)
+{
+    .header
+    {
+        display: block;
+        /*auto e initial para resetear valores*/
+        height: auto;
+    }
+
+    .header ol
+    {
+        display: block;
+    }
+
+    .header ol li
+    {
+        height: 50px;
+    }
+
+    .header a
+    {
+        justify-content: center;
+    }
+
+    .header .logo
+    {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+
+}
+
+@media screen and (max-width: 320px)
+{
+
 }

@@ -12,5 +12,33 @@
         <div class="box" id="box_2"></div>
         <div class="box" id="box_3"></div>        
     </div>
+
+    <!-- Medidas Relativas en Resposive Design -->
+    <!-- % -> Porcentaje, logitud referente al tamaño de los elementos padre -->
+    <!-- em -> Unidad relativa al tamaño de fuente especificada mas cercano  -->
+    <nav font-size: 16px;>
+        <ul font-size: 2em; 32px;>
+            <li font-size: 1em; 32px;>
+                <a href="" font-size: .5em; 16px; padding: 2em; 32px;>Hola!</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- rem -> Unidad relativa al tamaño de fuente especificada en el ancestro mas lejano (html o body) -->
+    <!DOCTYPE html font-size: 32px;> 
+    <html lang="en">
+    <head>
+    </head>
+    <body font-size: 16px;>
+        <ul font-size: 2rem; 64px;>
+            <li font-size: 1rem; 32px>
+                <a href="" font-size: .5rem; 16px;></a>
+            </li>
+        </ul>
+    </body>
+    </html>
+    <!-- vw / vh -> Unidad relativa porcentual con respecto al viewport -->
+    <!-- Landscape 100vw = 1024 100vh = 437 Portrait 100vw = 437px 100vh = 1024px -->
+
+    <!-- Media Queries: Nos pertien decidir en que resoluciones se adaptara nuestro contenido -->
 </body>
 </html>
