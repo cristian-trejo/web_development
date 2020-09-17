@@ -489,8 +489,19 @@ h2
 }
 
 /* Desktop fist -> Empezar desde el MQ mas grande*/
-@media screen and (max-width: 1024px)
+/*1023 para que se nuestro diseño inicial se visualize*/
+@media screen and (max-width: 1023px)
 {
+    .event-list-title
+    {
+        margin-left: 0;
+    }
+
+    .portfolio
+    {
+        padding: 0;
+    }
+
     .container
     {
         padding: 0 1em;
@@ -557,6 +568,12 @@ h2
 /*Para resoluciones menores a iPad*/
 @media screen and (max-width: 767px)
 {
+    h2 
+    {
+        font-size: 1.2em;
+        margin: 0.5em 0;
+    }
+
     .burger-button
     {
         display: block;
@@ -662,7 +679,7 @@ h2
 
     .project-description
     {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
     .event
@@ -688,8 +705,8 @@ h2
 
     .project-details
     {
-        width: auto;
-        font-size: 12px;
+        /*width: auto; */
+        font-size: 14px;
     }
 
     .event-detail
@@ -723,6 +740,15 @@ h2
         text-align: center;
         /*Ajustar footer y eliminar espacio en blanco*/
         border: 1px solid transparent;
+    }
+
+    /*Ajustamos el tamaño de los iconos de social*/
+    .social-link
+    {
+        width: 40px;
+        height: 40px;
+        /*Para poner el mismo tamaño en X y Y*/
+        background-size: 100%;
     }
 }
 

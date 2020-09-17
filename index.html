@@ -16,7 +16,7 @@
 
 <body>
 
-    <i class="icon-menu burger-button"></i>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
 
     <header class="header"> 
         <div class="container">
@@ -86,7 +86,7 @@
         </div>
     </section>
 
-    <div class="container">
+    <div id="experiencia" class="container">
         <h2 class="event-list-title">Más sobre mi experiencia</h2>
     </div>
 
@@ -167,5 +167,66 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        /*npm -> Gestor de modulos de paquetes de node*/
+        /*Para habilitar ejecucion de Scripts en PowerSheel
+            Get-ExecutionPoilicy -> Restricted
+            Set-ExecutionPolicy Unrestricted
+        */
+
+        const ipad = window.matchMedia('screen and (max-width: 767px)');
+
+        /*log -> para verificar que los elementos existen*/
+        /*Guardamos la ubicacion del menu, porque lo vamos a ocultar y visualizar*/
+        const menu = document.querySelector('.menu');        
+        /*Guardamos la ubicacion del icono burger*/
+        const burgerButton = document.querySelector('#burger-menu');                        
+        
+        /*Para los ocultar los enlaces del menu al hacer click*/
+        const links_menu = document.querySelectorAll('.link');
+
+        /*Activata la funcion dependiendo de la condicion, en este caso 'ipad'*/
+        /*Asi no tenemos que esperar a que se recage el navegador para saber si se cumple la resolucion*/
+        ipad.addListener(validation);
+        /*Para que funcione el menu al abrir pagia en resolucion movil*/
+        validation(ipad);
+
+        function validation(event)
+        {
+            if (event.matches)
+            {
+                /*Agregamos un evento de click al boton*/
+                burgerButton.addEventListener('click', hideShow)
+            
+                Array.from(links_menu).forEach(link =>
+                {
+                    link.addEventListener('click', hideShow)
+                })
+            }else
+            {
+                /*Eleiminamos el evento, ya que estos sonsumen menoria y recursos*/
+                burgerButton.removeEventListener('click', hideShow)
+            }
+        }
+
+        function hideShow()
+        {
+            /*Toggle -> si tienes la clase agregala, si no, quitala*/
+            //menu.classList.toggle('is-active');
+            /*Preguntamos si el boton tiene la clase 'is-active'*/
+            if (menu.classList.contains('is-active'))
+            {
+                /*Si la tiene la quitamos para ocultar el menu*/
+                menu.classList.remove('is-active');
+            }else
+            {
+                /*Si no la tiene, la agregamos para que se visualice el menu*/
+                menu.classList.add('is-active');    
+            }
+        }
+         
+    </script>
+
 </body>
 </html>
