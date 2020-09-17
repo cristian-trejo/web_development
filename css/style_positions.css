@@ -1,0 +1,171 @@
+/*  Posiciones en CSS
+
+    > static: es la propiedad por defecto.
+    Con las otras opciones, se activan las propiedades de top, bottom, left, right y z-index.
+    > relative: el objeto se mueve en base al lugar donde se encuentra originalmente.
+    > absolute: el objeto se ubica de manera absoluta con el elemento más cercano que tenga posición relativa o con el body.
+    > fixed: El elemento se muestra de manera fija en el viewport.
+    > sticky: El elemento se queda de manera fija una vez que aparece en pantalla. 
+*/    
+
+.section
+{
+    height: 200px;
+    background: lightslategray;
+    margin: 10px 0;
+    border: 1px solid red;    
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>Posicion Relativa*/
+#relative_section
+{
+    height: 200px;
+    background: lightslategray;
+    margin: 10px 0;
+    border: 1px solid red;
+}
+
+#relative_p
+{
+    font-size: 2em;
+}
+
+/*Al ser relativo se pueden sobreponer a otros ementos, pero si agregamos otro elemento el espacio se estaria respetando*/
+#relative_span
+{
+    position: relative;
+    right: -20px;
+    background: blue;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>Posicion Absoluta*/
+#absolute_section
+{
+    height: 200px;
+    background: lightslategray;
+    margin: 10px 0;
+    border: 1px solid red;
+    /* position: relative; */
+}
+
+#absolute_p
+{
+    font-size: 2em;
+    background: red;
+    /*Para que ocupe menos ancho*/
+    display: inline-block;
+    position: relative;
+}
+
+/*Al ser absoluto se ubica de manera absoluta o relativa
+    respecto al elemento absoluto o relativo mas cercano o
+    por defecto con el ultimo elemento html (body o html)*/
+#absolute_span
+{
+    position: absolute;
+    /*Right: 0; -> se pone en el borde de la pagina*/
+    /* right: -200px; */
+    /* background: blue; */
+    top: 0;
+}
+
+.mundo
+{
+    background: pink;
+    /*z-index puede tener cualquier valor, el mayor sera el primero*/
+    z-index: 1;
+}
+
+.responsive
+{
+    background: yellow;
+    /*Amarillo aparece primero porque es el ultimo que lee html*/
+    z-index: 0;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>Posicion Fixed*/
+/*Esta posicion es fija en toda la pagina, como un menu*/
+#fixed_section
+{
+    height: 200px;
+    background: lightslategray;
+    margin: 10px 0;
+    border: 1px solid red;
+    /* position: relative; */
+}
+
+#fixed_p
+{
+    font-size: 2em;
+    background: red;    
+    display: inline-block;
+    position: relative;
+}
+
+/*Al ser fijo se no se mueve cuado hay scroll*/
+#fixed_span
+{
+    position: fixed;
+    /*Right: 0; -> se pone en el borde de la pagina*/
+    /* right: -200px; */
+    /* background: blue; */
+    top: 0;
+}
+
+.mundo
+{
+    background: pink;
+    /*z-index puede tener cualquier valor, el mayor sera el primero*/
+    z-index: 1;
+}
+
+.responsive
+{
+    background: yellow;
+    /*Amarillo aparece primero porque es el ultimo que lee html*/
+    z-index: 0;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>Posicion sticky*/
+/*Esta posicion te sigue cuando llegar a una posicion*/
+#sticky_section
+{
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    border: 1px solid red;
+    position: sticky;
+    top: 0;
+}
+
+#sticky_p
+{
+    font-size: 2em;
+    background: red;    
+    display: inline-block;
+    position: relative;
+}
+
+/*Al ser fijo se no se mueve cuado hay scroll*/
+#sticky_span
+{
+    position: fixed;
+    /*Right: 0; -> se pone en el borde de la pagina*/
+    /* right: -200px; */
+    /* background: blue; */
+    top: 0;
+}
+
+.mundo
+{
+    background: pink;
+    /*z-index puede tener cualquier valor, el mayor sera el primero*/
+    z-index: 1;
+}
+
+.responsive
+{
+    background: yellow;
+    /*Amarillo aparece primero porque es el ultimo que lee html*/
+    z-index: 0;
+}
